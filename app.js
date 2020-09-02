@@ -1,13 +1,19 @@
-const title = <h1>This is my title !</h1>
+const title = 'This is '
 
-const desc = <p>This is the description</p>
+const desc = 'This is the description'
 
-const header = React.createElement (
-    'header',
-    title,
-    desc
-);
+const header = (
+    <header>
+    {/* THIS IS A COMMENT*/}
 
+    {/* THIS IS A 
+    MULTI LINE COMMENT*/}
+<h1> {title} Ciarans REACT site</h1>
+
+
+<p className="ClassIsaReservedWord"> {desc} </p>
+    </header>
+)
 ReactDOM.render(
     header,
     document.getElementById('root')
