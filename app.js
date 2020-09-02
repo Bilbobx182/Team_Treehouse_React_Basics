@@ -1,14 +1,6 @@
-const title = React.createElement(
-    'h1',
-    {id : 'main-title',title : 'This is a title'},
-    'Hello World'
-);
+const title = <h1>This is my title !</h1>
 
-const desc = React.createElement (
-    'p',
-    null,
-    'This is child p with empty props'
-);
+const desc = <p>This is the description</p>
 
 const header = React.createElement (
     'header',
