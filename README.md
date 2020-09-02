@@ -6,3 +6,4 @@
 ### VSCode plugins
 
 - Babel JS / ES6
+- LiveServer
