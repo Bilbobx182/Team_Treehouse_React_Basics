@@ -1,15 +1,12 @@
-const title = 'This is '
-
-const desc = 'This is the description'
-
-const header = (
-    <header>
-    {/* THIS IS A COMMENT*/}
-
-    {/* THIS IS A 
-    MULTI LINE COMMENT*/}
-<h1> {title} Ciarans REACT site</h1>
-
+{/* React components upper case */}
+function Header() {
+    return (
+        <header>
+            <h1>Scoreboard</h1>
+            <span className='stats'> Players : 1</span>
+        </header>
+    );
+}
 
 <p className="ClassIsaReservedWord"> {desc} </p>
     </header>
