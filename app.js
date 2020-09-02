@@ -1,17 +1,15 @@
 {/* React components upper case */}
-function Header() {
-    return (
+const Header = () =>
+     (
         <header>
             <h1>Scoreboard</h1>
             <span className='stats'> Players : 1</span>
         </header>
     );
-}
 
-<p className="ClassIsaReservedWord"> {desc} </p>
-    </header>
-)
+
+
 ReactDOM.render(
-    header,
+    <Header />,
     document.getElementById('root')
 );
