@@ -1,9 +1,9 @@
 {/* React components upper case */}
-const Header = () => {
+const Header = (props) => {
     return      (
         <header>
-            <h1>Scoreboard</h1>
-            <span className='stats'> Players : 1</span>
+            <h1>{props.title}</h1>
+            <span className='stats'> Players {props.totalPlayers}</span>
         </header>
     );
 }
@@ -29,7 +29,7 @@ const Player = () => {
 
 const App = () => {
     return (<div className='sscoreboard'>
-    <Header></Header>
+    <Header title='Scoreboard' totalPlayers={1} ></Header>
     <Player></Player>
     </div>);
 
