@@ -8,24 +8,27 @@ const Header = () => {
     );
 }
 
-
+const Counter = () => {
+ return (
+    <div className='counter'>
+    <button className='counter-action decrement'> - </button>
+    <span className='counter-score'> 182 </span>
+    <button className='counter-action increment'> + </button>
+</div>
+ );
+}
 
 const Player = () => {
     return (
     <div className='player'>
         <span className='player-name'>Ciaran</span>
-    
-        <div className='counter'>
-            <button className='counter-action decrement'> - </button>
-            <span className='counter-score'> </span>
-            <button className='counter-action increment'> + </button>
-        </div>
+        <Counter></Counter>
     </div>
     );
 }
 
-const Ciaran_App = () => {
-    return (<div>
+const App = () => {
+    return (<div className='sscoreboard'>
     <Header></Header>
     <Player></Player>
     </div>);
@@ -33,6 +36,6 @@ const Ciaran_App = () => {
 }
 
 ReactDOM.render(
-    <Ciaran_App />,
+    <App />,
     document.getElementById('root')
 );
