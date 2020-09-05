@@ -1,4 +1,16 @@
-{/* React components upper case */}
+{/*
+    Author :  Ciaran O Nuallain 
+    Date : 05/September/2020
+    Purpose : Micro Project following team tree-house to engage with REACT best processes.
+
+*/}
+
+
+const players = [
+     {'name':'ciaran',score:0},
+     {'name':'luigi',score:0},
+]
+
 const Header = (props) => {
     return      (
         <header>
@@ -27,15 +39,19 @@ const Player = (props) => {
     );
 }
 
-const App = () => {
+const App = (props) => {
     return (<div className='sscoreboard'>
-    <Header title='Scoreboard' totalPlayers={1} ></Header>
-    <Player playername='Ciaran' score={0}></Player>
+    <Header title='Scoreboard' totalPlayers={props.initialPlayers.length} ></Header>
+    
+    {props.initialPlayers.map( player =>
+        <Player playername={player.name} score={player.score}></Player>
+    )}
+
     </div>);
 
 }
 
 ReactDOM.render(
-    <App />,
+    <App initialPlayers={players}/>,
     document.getElementById('root')
 );
