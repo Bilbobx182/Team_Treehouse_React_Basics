@@ -55,7 +55,11 @@ class Counter extends React.Component {
 const Player = (props) => {
     return (
     <div className='player'>
-        <span className='player-name'>{props.playername}</span>
+        <span className='player-name'>
+        <button className="remove-player" onClick={() => {props.rmPlayer(props.id)}} >✖</button>
+        {props.playername}
+
+        </span>
         <Counter></Counter>
     </div>
     );
@@ -66,8 +70,16 @@ class App  extends React.Component {
     state = {
         players: [
             {'id':0,'name':'Ciaran'},
-            {'id':1,'name':'Mary'},
+            {'id':1,'name':'Mary'}
         ]
+    }
+
+    removePlayer = (id) => {
+        this.setState(prevState => {
+            return {
+                players : prevState.players.filter(p => p.id !== id)
+            }; 
+        });
     }
 
     render() {
@@ -76,7 +88,14 @@ class App  extends React.Component {
         <Header title='Scoreboard' totalPlayers={this.state.players.length} ></Header>
         
         {this.state.players.map( player =>
-            <Player key={player.id.toString()} playername={player.name} ></Player>
+            <Player 
+            id = {player.id}
+            key={player.id.toString()}
+            playername={player.name}
+            rmPlayer = {this.removePlayer}
+
+
+             ></Player>
         )}
     
         </div>);
