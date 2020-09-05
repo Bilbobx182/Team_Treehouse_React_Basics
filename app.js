@@ -7,8 +7,8 @@
 
 
 const players = [
-     {'name':'ciaran',score:0},
-     {'name':'luigi',score:0},
+     {'id':0,'name':'ciaran',score:0},
+     {'id':1,'name':'luigi',score:0},
 ]
 
 const Header = (props) => {
@@ -44,7 +44,7 @@ const App = (props) => {
     <Header title='Scoreboard' totalPlayers={props.initialPlayers.length} ></Header>
     
     {props.initialPlayers.map( player =>
-        <Player playername={player.name} score={player.score}></Player>
+        <Player key={player.id.toString()} playername={player.name} score={player.score}></Player>
     )}
 
     </div>);
