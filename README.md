@@ -1,6 +1,9 @@
-# Team_Treehouse_React_Basics
+# Treehouse REACT
 
-- Following a tutorial to refresh on REACT  best practices.
+- This is a repository in which I worked on REACT.
+- The outcome of this was enhanced knowledge of REACT best practices.
+
+- ![outcome](https://i.imgur.com/bCmz5V5.png)
 
 
 ### VSCode plugins
